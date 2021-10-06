@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  loggedInUsersFirstName:string ="Marcilino" ;
+  loggedInUsersLastName:string="da Maia";
   constructor() {}
 
 }

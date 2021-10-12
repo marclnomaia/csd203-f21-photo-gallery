@@ -5,14 +5,17 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private loggedIn= new BehaviorSubject<boolean>(false);
+  private loggedIn= false;
 
-   
+  signInWithEmail() {
+    this.loggedIn = true;
+    alert("Sign in pressed");
+    }
 
-  get isloggedIn(){
-    return this.loggedIn.asObservable();
+  isloggedIn(){
+    return this.loggedIn;
   }
-
+ 
    
   constructor() { }
   

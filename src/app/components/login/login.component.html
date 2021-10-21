@@ -1,12 +1,16 @@
-<p>
-SignIn!
-<h1>"Congrats you are logged</h1>
-</p>
 
-<ion-label>E-mail</ion-label>
+<p>
+SignIn!</p>
+
+<!--<ion-label>E-mail</ion-label>
 <ion-input type="Email"></ion-input>
-<!-- Default Input -->
 <ion-label>Password</ion-label>
-<ion-input type="Password"></ion-input>
+<ion-input type="Password"></ion-input>-->
+<ion-input [(ngModel)]="email" type="email">Email</ion-input>
+<ion-input [(ngModel)]="password" type="password">Password</ion-input>
+
 <!-- Input with value -->
 <ion-button (click)="signIn()">Sign in</ion-button>
+<h1 *ngIf="auth.isLoggedIn()">Welcome, you are Logged!</h1>
+<ion-button routerLink="/user-benefits">Enjoy the user-benefits</ion-button>
+

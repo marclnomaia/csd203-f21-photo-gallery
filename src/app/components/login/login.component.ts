@@ -20,4 +20,9 @@ export class LoginComponent implements OnInit {
  
   ngOnInit() {}
 
+  signInWithGoogle() { 
+    this.auth.signInWithGooglePopUp();
+    }
+   
+
 }

@@ -8,9 +8,10 @@ SignIn!</p>
 <ion-input type="Password"></ion-input>-->
 <ion-input [(ngModel)]="email" type="email">Email</ion-input>
 <ion-input [(ngModel)]="password" type="password">Password</ion-input>
-
+<h1 *ngIf="auth.isLoggedIn()">Welcome, you are Logged!</h1>
+<h1 *ngIf="auth.isLoggedIn()">You are signed in as {{auth.getUserData().email}}!</h1>
 <!-- Input with value -->
 <ion-button (click)="signIn()">Sign in</ion-button>
-<h1 *ngIf="auth.isLoggedIn()">Welcome, you are Logged!</h1>
 <ion-button routerLink="/user-benefits">Enjoy the user-benefits</ion-button>
+<button (click)="signInWithGoogle()">Sign In with Google</button>
 
